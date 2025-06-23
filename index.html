@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog de Arquitectura</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Radley&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #d0cf98;
+        font-family: "Radley", serif;
+        margin: 0;
+        padding: 0;
+        color: #2b2b2b;
+        text-align: justify;
+      }
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      header {
+        background-color: #a9a87b;
+        padding: 20px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        color: #2b2b2b;
+      }
+      nav {
+        background-color: #f5f5c7;
+        padding: 10px;
+        text-align: center;
+      }
+      nav a {
+        text-decoration: none;
+        color: #2b2b2b;
+        margin: 0 15px;
+        padding: 10px;
+      }
+      nav a:hover {
+        background-color: #a9a87b;
+      }
+      main {
+        padding: 20px;
+      }
+      section {
+        background-color: #f5f5c7;
+        padding: 40px 20px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+      }
+      section h2 {
+        color: #2b2b2b;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      #inspira {
+        background-color: #a9a87b;
+        color: #2b2b2b;
+      }
+      #inspira h2 {
+        color: #2b2b2b;
+      }
+      section img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 12px;
+      }
+      .dato-curioso-btn {
+        background-color: #a9a87b;
+        border: none;
+        padding: 10px 18px;
+        color: #2b2b2b;
+        font-family: "Radley", serif;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 6px;
+        margin-top: 15px;
+        transition: background-color 0.3s ease;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .dato-curioso-btn:hover {
+        background-color: #857f5a;
+      }
+      .dato-curioso-cuadro {
+        background-color: #a9a87b;
+        color: #2b2b2b;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-style: italic;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+      }
+      .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .galeria img {
+        width: 100%;
+        max-width: 32%;
+        border-radius: 12px;
+      }
+      @media (max-width: 768px) {
+        .galeria {
+          flex-direction: column;
+        }
+        .galeria img {
+          max-width: 100%;
+        }
+      }
+      .calculator {
+        background-color: #f5f5c7;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .calculator input {
+        width: 100%;
+        padding: 0.6rem;
+        margin: 0.5rem 0;
+        border: 1px solid #bfbfbf;
+        border-radius: 10px;
+        font-size: 1rem;
+        background-color: #ffffff;
+        color: #2b2b2b;
+        box-sizing: border-box;
+      }
+      .calculator button {
+        width: 100%;
+        padding: 0.8rem;
+        margin-top: 1rem;
+        background-color: #a9a87b;
+        color: #2b2b2b;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        font-family: "Radley", serif;
+      }
+      .calculator button:hover {
+        background-color: #857f5a;
+      }
+      .resultado {
+        margin-top: 1.5rem;
+        font-size: 1.1rem;
+        color: #2b2b2b;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        min-height: 1.5rem;
+      }
+      .resultado.visible {
+        opacity: 1;
+      }
+      footer {
+        background-color: #a9a87b;
+        color: #2b2b2b;
+        text-align: center;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>BLOG DE ARQUITECTURA</h1>
+    </header>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#papel">Desde el Papel</a>
+      <a href="#materia">Materia y Forma</a>
+      <a href="#inspira">Arquitectura que Inspira</a>
+      <a href="#render">Detrás del Render</a>
+    </nav>
+    <main class="container">
+      <section id="inicio">
+        <p>
+          ¡Bienvenido a un espacio donde las ideas se convierten en espacios y
+          cada línea tiene intención! Aquí comparto mi visión del diseño
+          arquitectónico como una forma de diálogo entre la ciudad, las personas
+          y el entorno. Este sitio es una invitación a descubrir proyectos que
+          nacen del deseo de crear lugares que se sientan, se piensen y se
+          vivan.
+        </p>
+        <p>
+          En este blog encontrarás reflexiones sobre diseño, procesos creativos
+          y referentes arquitectónicos que inspiran. Explora y conecta con una
+          comunidad apasionada por crear espacios con propósito.
+        </p>
+        <ul>
+          <li>Ideas y proyectos desde el boceto hasta el render.</li>
+          <li>Exploraciones sobre materiales, detalles y técnicas.</li>
+          <li>Referentes arquitectónicos que inspiran e influyen.</li>
+        </ul>
+        <img
+          src="https://images.pexels.com/photos/29402562/pexels-photo-29402562.jpeg"
+          alt="Corredor arquitectónico"
+        />
+      </section>
+      <section id="papel">
+        <h2>Desde el Papel</h2>
+        <p>
+          Esta sección es un espacio dedicado a mostrar tus planos, esquemas,
+          cortes, diagramas o cualquier trabajo técnico que refleje el
+          pensamiento detrás del diseño. Aquí se ve el lenguaje arquitectónico
+          en su forma más pura, donde las ideas comienzan a tomar forma con
+          lápiz y regla.
+        </p>
+        <p>
+          Compartimos cómo los trazos iniciales revelan conceptos, estructuras y
+          el orden espacial. Es el primer paso de todo proyecto, donde la
+          creatividad se mezcla con la técnica para dar vida al papel.
+        </p>
+      </section>
+      <section id="materia">
+        <h2>Materia y Forma</h2>
+        <p>
+          Explora aquí los materiales, texturas, detalles constructivos y
+          decisiones que definen el carácter de tus proyectos. Una especie de
+          zoom al “cómo está hecho” que complementa lo visual con lo técnico.
+        </p>
+        <p>
+          Desde el concreto aparente hasta el encofrado preciso, este espacio
+          revela cómo los materiales hablan, sienten y estructuran los espacios.
+          Es la dimensión física que le da carácter y sentido al diseño.
+        </p>
+        <button class="dato-curioso-btn" onclick="mostrarDato()">
+          Dato Curioso
+        </button>
+        <div id="datoCurioso" class="dato-curioso-cuadro" style="display: none">
+          ¿Sabías que el hormigón no solo es resistente, sino que también puede
+          regular la temperatura interior si se combina con materiales
+          adecuados? ¡La materia también diseña!
+        </div>
+      </section>
+      <section id="inspira">
+        <h2>Arquitectura que Inspira</h2>
+        <p>
+          Una galería o blog visual donde compartas referentes arquitectónicos:
+          edificios que amas, obras que te marcaron, detalles que te parecen
+          brillantes. Puede funcionar como archivo personal y fuente de
+          inspiración para otros.
+        </p>
+        <p>
+          Esta sección es para detenerte a observar, reflexionar y contagiarte
+          de lo que otros arquitectos han creado. Aquí se trata de nutrir el
+          imaginario y ampliar la mirada creativa.
+        </p>
+      </section>
+      <section>
+        <h2>Galería de Inspiración</h2>
+        <div class="galeria">
+          <img
+            src="https://i.postimg.cc/bYgmsWpY/Captura-de-pantalla-2025-06-17-135638.png"
+            alt="Inspiración 1"
+          />
+          <img
+            src="https://i.postimg.cc/FR475TBw/imagen.png"
+            alt="Inspiración 2"
+          />
+          <img
+            src="https://i.postimg.cc/qq7B4SXD/Captura-de-pantalla-2025-06-17-140330.png"
+            alt="Inspiración 3"
+          />
+        </div>
+      </section>
+      <section id="render">
+        <h2>Detrás del Render</h2>
+        <p>
+          Una sección tipo mini-docu o bitácora visual para mostrar el proceso
+          de modelado, representación, postproducción o maquetación. Acá puedes
+          enseñar cómo pasas de la idea al resultado final con imágenes, videos
+          o tips.
+        </p>
+        <p>
+          Desde el primer 3D hasta los ajustes de luz y textura, este espacio
+          revela el detrás de cámaras de tus representaciones. Es una invitación
+          a compartir trucos, procesos y evolución visual.
+        </p>
+      </section>
+      <section>
+        <h2>Calculadora de Volumen</h2>
+        <div class="calculator">
+          <input type="number" id="ancho" placeholder="Ancho (m)" />
+          <input type="number" id="largo" placeholder="Largo (m)" />
+          <input type="number" id="altura" placeholder="Altura (m)" />
+          <button onclick="calcularVolumen()">Calcular</button>
+          <div class="resultado" id="resultado"></div>
+        </div>
+      </section>
+    </main>
+    <footer>© 2025 BLOG DE ARQUITECTURA</footer>
+    <script>
+      function mostrarDato() {
+        const dato = document.getElementById("datoCurioso");
+        dato.style.display = dato.style.display === "block" ? "none" : "block";
+      }
+      function calcularVolumen() {
+        const ancho = parseFloat(document.getElementById("ancho").value);
+        const largo = parseFloat(document.getElementById("largo").value);
+        const altura = parseFloat(document.getElementById("altura").value);
+        const resultadoDiv = document.getElementById("resultado");
+        if (
+          !ancho ||
+          !largo ||
+          !altura ||
+          ancho <= 0 ||
+          largo <= 0 ||
+          altura <= 0
+        ) {
+          resultadoDiv.textContent =
+            "Completa todos los campos con valores válidos.";
+          resultadoDiv.classList.add("visible");
+          return;
+        }
+        const volumen = ancho * largo * altura;
+        resultadoDiv.textContent = `El volumen es: ${volumen.toFixed(2)} m³`;
+        resultadoDiv.classList.add("visible");
+      }
+    </script>
+  </body>
+</html>
